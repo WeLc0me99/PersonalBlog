@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+    background-size: cover;
+    background-image: url(image/Istanbul\ x.jpg);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container {
+    text-align: center;
+    max-width: 300px;
+    max-height: fit-content;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    background: rgba(10, 10, 10, 0.4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+    h1 {
+      text-align: center;
+      color: rgb(208, 201, 201);
+      margin-bottom: 5px; 
+    }
+
+    #contact-form {
+      margin-bottom: 5px; 
+    }
+
+    .form-group {
+      margin-bottom: 1px; 
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: rgb(208, 201, 201);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input {
+       color: #f7f7f7;
+        background:none;
+        width: calc(100% - 22px);
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 40px;
+      transition: border-color 0.3s ease-in-out;
+      height: 30px; 
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input:focus {
+      border-color: #4CAF50;
+    }
+
+    button {
+        
+        background-color: #a8ada88e;
+      color: rgb(208, 201, 201);
+      padding: 10px 20px;
+      margin: 2px;
+      border: none;
+      border-radius: 40px; 
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      width: 40%;
+    }
+
+    button:hover {
+      background-color:#6362635c;
+      
+    }
+
+    #contact-info {
+      border-top: 1px solid #ccc;
+      padding-top: 15px; 
+    }
+
+    #contact-info h2 {
+      margin-top: 0;
+      color: rgb(208, 201, 201);
+    }
+
+    #contact-info p {
+      margin-bottom: 5px; 
+      color: rgb(208, 201, 201);
+    }
+    
+
+    .button1 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color:#6362635c;
+      color: rgb(208, 201, 201);
+            text-decoration: none;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .button1:hover {
+            
+            background-color: #a8ada88e;
+        }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div id="contact-form">
+      <form id="contactForm" method="post" action="contact_message.php">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <input id="message" name="message" rows="3" placeholder="Send a message" required>
+        </div>
+        <button type="submit">Submit</button>
+      
+    </form>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          
+          var contactForm = document.getElementById('contactForm');
+  
+          
+          contactForm.addEventListener('submit', function(event) {
+              
+              event.preventDefault();
+  
+              
+              var formData = new FormData(contactForm);
+  
+             
+              fetch('contact_message.php', {
+                  method: 'POST',
+                  body: formData
+              })
+              .then(response => {
+                  if (response.ok) {
+                      
+                      alert('Thank you! Your message has been sent to us  :).');
+                     
+                      contactForm.reset();
+                  } else {
+                     
+                      alert('Failed to submit the contact form. Please try again later.');
+                  }
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+                  alert('An error occurred. Please try again later.');
+              });
+          });
+      });
+    </script>
+    
+    
+  
+    
+    
+    </div>
+    <div id="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong>Istanbul,Turkey</p>
+      <p><strong>Phone:</strong> 90 538 000 000</p>
+
+      <a href="https://github.com/" target="_blank"
+class="button1">
+    Social media link
+    </a> 
+    <a href="https://www.instagram.com/visit.istanbulofficial/" target="_blank" rel="noopener noreferrer" class="button1">Instagram</a>
+    </div>
+  </div>
+</body>
+</html>

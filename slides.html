@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="css/page2.css">
+    
+</head>
+
+
+<body>
+   
+    
+    <header>
+        <div class="navbar">
+            <div class="icon">
+                <img src="image/Logo.png" class="logo" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="slides.html">Gallery</a>
+                <a href="comment.html">Comments</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Slide Section -->
+     
+    <!-- 1 -->
+    <div class="slide">
+        <div class="list">
+            <div class="item">
+                <img src="image/Bosphours.jpg" alt="Bosphorus" style="filter: brightness(0.5);">
+                <div class="content">
+                    <div class="title">Istanbul</div>
+                    <div class="topic">Bosphorus </div>
+                    <div class="des">
+                        The Bosphorus Strait is the soul of Istanbul, a shimmering ribbon of water that separates two continents, 
+                        yet connects the city as one. As you cruise along its waters, you can witness a tapestry of life: 
+                        fishermen casting their lines, luxury yachts gliding past historic wooden mansions, and seagulls
+                         soaring against the backdrop of ancient minarets. The Bosphorus isn’t just a waterway; 
+                        it’s a living, breathing part of Istanbul that tells tales of empires, trade, and cultural exchange.   
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://istanbeautiful.com/bosphorus-strait-istanbul/" >See More</a></button>
+                        <button><a href="contact.html">Contact</a></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2 -->
+            <div class="item">
+                <img src="image/Galata.jpg" alt="Galata Tower" style="filter: brightness(0.5);">
+                <div class="content">
+                    <div class="title">istanbul</div>
+                    <div class="topic">Galata Tower</div>
+                    <div class="des">
+                        The Galata Tower, standing proudly in the heart of the city, has watched over Istanbul since the 14th 
+                        century. Once a lookout tower, it now serves as a beacon for travelers and locals alike,
+                         offering a 360-degree view of the bustling metropolis below. From its top, you can see the old city’s
+                         skyline dotted with domes and minarets, as well as the vibrant neighborhoods that paint a 
+                         picture of Istanbul’s vibrant and diverse culture. Legend has it that Hezarfen Ahmed Çelebi,
+                          an Ottoman aviator, once flew from this tower across the Bosphorus – a testament to the city’s spirit of adventure.
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://istanbul.com/travel/galata-tower" >See More</a></button>
+                        <button><a href="contact.html">Contact</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="item">
+                <img src="image/Ayasofia.jpg" alt="Hagia Sophia" style="filter: brightness(0.5);">
+                <div class="content">
+                    <div class="title">Istanbul</div>
+                    <div class="topic">Ayasofya</div>
+                    <div class="des">
+                        Hagia Sophia is more than just a building; it’s a journey through time. Constructed in 537 AD as a
+                         cathedral, it was the world’s largest and most magnificent church for nearly a thousand years. 
+                         Later converted into a mosque and now a museum, its walls hold the echoes of Byzantine chants and 
+                         Ottoman prayers. The stunning dome, the intricate mosaics depicting Christ and the Virgin Mary,
+                         and the Islamic calligraphy blend harmoniously, showcasing the unique cultural mosaic of Istanbul.
+                         Hagia Sophia stands as a symbol of coexistence, embodying the essence of this diverse and ever-evolving city. 
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://istanbul.com/travel/hagia-sophia-mosque" >See More</a></button>
+                        <button><a href="contact.html">Contact</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="item">
+                <img src="image/girl tower.jpg" alt="Maiden's Tower" style="filter: brightness(0.5);">
+                <div class="content">
+                    <div class="title">Istanbul</div>
+                    <div class="topic">Maiden’s Tower</div>
+                    <div class="des">
+                        Rising on a tiny islet in the middle of the Bosphorus, the Maiden’s Tower has 
+                        been a silent witness to centuries of history. Known as Kız Kulesi in Turkish,
+                         this mysterious tower has inspired countless legends. One of the most famous 
+                         tales is of a sultan who built the tower to protect his beloved daughter from a 
+                         prophecy that foretold her death by a snake bite. Today, it is a romantic spot 
+                         where couples enjoy dinner with a panoramic view of the city. The Maiden’s Tower
+                          is a place where the past meets the present, surrounded by the gentle waves of 
+                          the Bosphorus and illuminated by the city lights at night.
+                        </div>
+                    <div class="buttons">
+                        <button><a href="https://istanbul.com/travel/the-maiden-and-tower" >See More</a></button>
+                        <button><a href="contact.html">Contact</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- thumbnails  -->
+        <div class="thumbnail">
+            <div class="item" onclick="openModal('image/Bosphours.jpg')">
+                <img src="image/Bosphours.jpg" alt="Bosphorus Thumbnail">
+                <div class="content">
+                    <div class="title">Bosphoru</div>
+                    <div class="description"> </div>
+                </div>
+            </div>
+            <div class="item" onclick="openModal('image/Galata.jpg')">
+                <img src="image/Galata.jpg" alt="Galata Tower Thumbnail">
+                <div class="content">
+                    <div class="title">Galata Tower</div>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="item" onclick="openModal('image/Ayasofia.jpg')">
+                <img src="image/Ayasofia.jpg" alt="Hagia Sophia Thumbnail">
+                <div class="content">
+                    <div class="title">Ayasofya</div>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="item" onclick="openModal('image/girl tower.jpg')">
+                <img src="image/girl tower.jpg" alt="Maiden's Tower Thumbnail">
+                <div class="content">
+                    <div class="title">Maiden’s Tower</div>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="arrows">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+        <div class="time"></div>
+    </div>
+   
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
